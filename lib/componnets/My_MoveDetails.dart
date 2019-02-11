@@ -1,6 +1,6 @@
   import 'package:flutter/material.dart';
-  import './Model/MyData_MoviesAction.dart';
-  import './Tools/app_tools.dart';
+import 'package:moviesapp/Tools/app_Colors.dart';
+import 'package:moviesapp/Tools/app_tools.dart';
 
 
 

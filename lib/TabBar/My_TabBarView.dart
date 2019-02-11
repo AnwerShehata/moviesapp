@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moviesapp/TabBar/TabBar_one.dart' as one;
 import 'package:moviesapp/TabBar/TabBar_two.dart' as two;
-import 'package:moviesapp/TabBar/TabBar_three.dart' as three;
 import 'package:moviesapp/TabBar/TabBar_four.dart' as four;
 
 
@@ -41,14 +40,13 @@ class _BirdState extends State<My_TabBarView> with SingleTickerProviderStateMixi
           // هنا اكواد تاب بار
           // هنا اكواد تاب بار
           bottom: new TabBar(
-            isScrollable: true,
+            isScrollable: false,
             controller: controller,
             indicatorColor: Colors.amber,
             tabs: <Widget>[
-              new Tab(text: "Movies",),
+              new Tab(text: "Home",),
               new Tab(text: "Series",),
-              new Tab(text: "Threesadsa"),
-              new Tab(text: "sleepasdasdad",),
+              new Tab(text: "Sections",),
             ],
           ),
 
@@ -63,7 +61,6 @@ class _BirdState extends State<My_TabBarView> with SingleTickerProviderStateMixi
           children: <Widget>[
             new one.TabBar_one(),
             new two.TabBar_two(),
-            new three.TabBar_three(),
             new four.TabBar_four(),
           ],
         ),

@@ -16,6 +16,30 @@
   }
   List<MyData_MoviesAction> dataMoviesAction =[
 
+
+    MyData_MoviesAction.items(
+        name: "The Lost Viking 2018",
+        description: " حول شاب محارب يدعى فيتهار يصل إلى بريطانيا مع أحلام الغزو والمغامرة ، ولكن عندما يتعرض أفراد عائلته وعشيرته لكمين ويقتلون ، يجب أن يعيش وحده في هذه الأرض الجديدة الغريبة والخطيرة بينما يبحث عن مستوطنة عمه.",
+        imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BMjJhZTIzMGYtNTBiMC00ZDVkLTkzOWEtMGY5ZmYyYzMyMjM2XkEyXkFqcGdeQXVyNTA5Nzg5OTQ@._V1_SY1000_CR007051000_AL_-435x623.jpg",
+        videoUrl: "https://youtu.be/pGhg6rCKSK4"
+    ),
+
+
+    MyData_MoviesAction.items(
+        name: "Polar 2019",
+        description: "يخرج قاتل محترف من تقاعده ليتعامل مع مجموعة من الشباب المنضمين لعصابة قتل بالأجر.",
+        imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BMjAzNDkzODU3Ml5BMl5BanBnXkFtZTgwNDI4OTExNzM@._V1_-435x623.jpg",
+        videoUrl: "https://youtu.be/7uWjMCO3tI4"
+    ),
+
+
+    MyData_MoviesAction.items(
+        name: " Aquaman 2018",
+        description: "يُدرك (آرثر كاري) أنه وريث مملكة (أتلانتيس) تحت الماء، وعليه أن يرنو إلى قيادة شعبه ليصبح بطلهم الأول، ومن ثَم بطل العالم",
+        imagUrl: "https://www.faselhd.co/wp-content/uploads/2018/12/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SY1000_CR006741000_AL_-435x623.jpg",
+        videoUrl: "https://youtu.be/WDkg3h8PCVU"
+    ),
+
     MyData_MoviesAction.items(
       name: "Overlord 2018",
       description: "تدور الأحداث حول جنديين أمريكيين خلف خطوط العدو، في يوم عملية الإنزال في نورماندي خلال الحرب العالمية الثانية، حيث يتم إسقاط جنديين أميريكيين من جنود المظلات خلف خطوط العدو لتنفيذ مهمة حاسمة لنجاح الغزو، لكن مع اقترابهما من هدفهما ، بدآ يدركا أن هناك المزيد في هذه القرية التي تحتلها القوات النازية وأن هذه ليست عملية عسكرية بسيطة، وخاصة عندما يجدآ أنفسهما يقاتلا ضد قوى خارقة للطبيعة، كجزء من تجربة نازية.",
@@ -23,6 +47,12 @@
       videoUrl: "https://youtu.be/USPd0vX2sdc"
     ),
 
+    MyData_MoviesAction.items(
+        name: "Bumblebee 2018",
+        description: "تدور أحداث الفيلم عام 1987، أثناء رحلة هروب بامبلبي من المطاردة حيث يجد مأوى في مخبأ خردة ببلدة شاطئية صغيرة بكاليفورنيا، في الوقت نفسه تحاول تشارلي وهي في مطلع الـ18 سنة أن تجد مكانًا لها في العالم، فتكتشف بامبلي محطم وبه آثار معارك كثيرة، وعندما تتمكن من تجديد أجزاءه وإعادته للحياة تدرك سريعًا إنه ليس مجرد سيارة فولكس فاغن صفراء تقليدية.",
+        imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BOTM3NzE5OTE1Nl5BMl5BanBnXkFtZTgwNzQwNjM3NjM@._V1_SY1000_CR006741000_AL_-435x623.jpg",
+        videoUrl: "https://youtu.be/fAIX12F6958"
+    ),
 
     MyData_MoviesAction.items(
       name: "Close 2019",
@@ -61,38 +91,6 @@
       description: "(أتيكوس جيدج) صائدة مكافآت محترفة، تقوم بملاحقة المجرمين بعد دمار مروّع أحلّ بكوكب الأرض.",
       imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BNDUyOTg1ODgyMF5BMl5BanBnXkFtZTgwNDY1Mjg4MTI@._V1_SY1000_CR006741000_AL_-435x623.jpg",
       videoUrl: "https://youtu.be/fsmldfshBhU"
-    ),
-
-
-    MyData_MoviesAction.items(
-      name: "The Lost Viking 2018",
-      description: " حول شاب محارب يدعى فيتهار يصل إلى بريطانيا مع أحلام الغزو والمغامرة ، ولكن عندما يتعرض أفراد عائلته وعشيرته لكمين ويقتلون ، يجب أن يعيش وحده في هذه الأرض الجديدة الغريبة والخطيرة بينما يبحث عن مستوطنة عمه.",
-      imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BMjJhZTIzMGYtNTBiMC00ZDVkLTkzOWEtMGY5ZmYyYzMyMjM2XkEyXkFqcGdeQXVyNTA5Nzg5OTQ@._V1_SY1000_CR007051000_AL_-435x623.jpg",
-      videoUrl: "https://youtu.be/pGhg6rCKSK4"
-    ),
-
-
-    MyData_MoviesAction.items(
-      name: "Polar 2019",
-      description: "يخرج قاتل محترف من تقاعده ليتعامل مع مجموعة من الشباب المنضمين لعصابة قتل بالأجر.",
-      imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BMjAzNDkzODU3Ml5BMl5BanBnXkFtZTgwNDI4OTExNzM@._V1_-435x623.jpg",
-      videoUrl: "https://youtu.be/7uWjMCO3tI4"
-    ),
-
-
-    MyData_MoviesAction.items(
-      name: "Bumblebee 2018",
-      description: "تدور أحداث الفيلم عام 1987، أثناء رحلة هروب بامبلبي من المطاردة حيث يجد مأوى في مخبأ خردة ببلدة شاطئية صغيرة بكاليفورنيا، في الوقت نفسه تحاول تشارلي وهي في مطلع الـ18 سنة أن تجد مكانًا لها في العالم، فتكتشف بامبلي محطم وبه آثار معارك كثيرة، وعندما تتمكن من تجديد أجزاءه وإعادته للحياة تدرك سريعًا إنه ليس مجرد سيارة فولكس فاغن صفراء تقليدية.",
-      imagUrl: "https://www.faselhd.co/wp-content/uploads/2019/01/MV5BOTM3NzE5OTE1Nl5BMl5BanBnXkFtZTgwNzQwNjM3NjM@._V1_SY1000_CR006741000_AL_-435x623.jpg",
-      videoUrl: "https://youtu.be/fAIX12F6958"
-    ),
-
-
-    MyData_MoviesAction.items(
-      name: " Aquaman 2018",
-      description: "يُدرك (آرثر كاري) أنه وريث مملكة (أتلانتيس) تحت الماء، وعليه أن يرنو إلى قيادة شعبه ليصبح بطلهم الأول، ومن ثَم بطل العالم",
-      imagUrl: "https://www.faselhd.co/wp-content/uploads/2018/12/MV5BOTk5ODg0OTU5M15BMl5BanBnXkFtZTgwMDQ3MDY3NjM@._V1_SY1000_CR006741000_AL_-435x623.jpg",
-      videoUrl: "https://youtu.be/WDkg3h8PCVU"
     ),
 
 

@@ -59,6 +59,10 @@ flutter:
            fonts:
              - asset: fonts/Cairo-Regular.ttf
 
+         - family: Tajawal
+           fonts:
+             - asset: fonts/Tajawal-Regular.ttf
+
 
 
 

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:moviesapp/Tools/app_Colors.dart';
-import '../Model/MyData_MoviesِAction.dart';
-import '../Pages/Page_EgyptMovies.dart';
-import '../PageDetails/MoveDetails_Action.dart';
 
-class Page_EgyptMovies extends StatefulWidget {
+import '../Model/MyData_MoviesِAnimation.dart';
+import '../Details/Details_Anmination.dart';
+
+class Page_Anmination extends StatefulWidget {
   _BirdState createState() => new _BirdState();
 }
 
-class _BirdState extends State<Page_EgyptMovies> {
+class _BirdState extends State<Page_Anmination> {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
@@ -40,18 +40,18 @@ class _BirdState extends State<Page_EgyptMovies> {
             //هنا يحدد طول الصورة التي تظهر في العمود اليمين واليسار
               staggeredTileBuilder: (int index) => new StaggeredTile.count(1, index.isEven ? 1.5 : 1.5),
               crossAxisCount: 3,
-              itemCount: dataMoviesAction.length,                         //هنا المكان الذي يجلب منه البيانات
+              itemCount: dataMoviesAnimation.length,                         //هنا المكان الذي يجلب منه البيانات
               mainAxisSpacing: 4,                                                  //هنا المسافة بين الصف والصف الاخر
               crossAxisSpacing: 4,                                                   //هنا المسافة بين العمود والعمود  الاخر
               physics: BouncingScrollPhysics(),                            //هنا يتم عمل السكرول مثل الايفون
               itemBuilder: (BuildContext context, int index) {
             return buildGestureDetector(
-                index ,imgUrl: "${dataMoviesAction[index].imagUrl}" ,
-                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> MoveDetails_Action(
-                imagUrl:"${dataMoviesAction[index].imagUrl}",
-                name: "${dataMoviesAction[index].name}",
-                description: "${dataMoviesAction[index].description}",
-                videoUrl: "${dataMoviesAction[index].videoUrl}",
+                index ,imgUrl: "${dataMoviesAnimation[index].imagUrl}" ,
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=> Details_Anmination(
+                imagUrl:"${dataMoviesAnimation[index].imagUrl}",
+                name: "${dataMoviesAnimation[index].name}",
+                description: "${dataMoviesAnimation[index].description}",
+                videoUrl: "${dataMoviesAnimation[index].videoUrl}",
                 ) ));});
           }
       ),

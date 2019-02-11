@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:moviesapp/Tools/app_Colors.dart';
-import 'package:moviesapp/Pages/Page_ActioMovies.dart';
-import 'package:flutter_youtube/flutter_youtube.dart';
+import 'package:moviesapp/Pages/Page_Action.dart';
 
-import '../PageDetails/MoveDetails_Action.dart';
 import '../Model/MyData_MoviesِAction.dart';
-import '../Pages/Page_EgyptMovies.dart';
+import '../Pages/Page_Action.dart';
+import '../Details/Details_Action.dart';
+
+import '../Pages/Page_Drama.dart';
+import '../Details/Details_Drama.dart';
+import '../Model/MyData_MoviesِDrama.dart';
+
+import '../Pages/Page_Anmination.dart';
+import '../Details/Details_Anmination.dart';
+import '../Model/MyData_MoviesِAnimation.dart';
+
 
 
 
@@ -30,8 +38,8 @@ class _BirdState extends State<TabBar_one> {
             //========== Container ListView  horizontal
             //=== قسم افلام الاكشن
             SizedBox(height: 30),
-            _NmeSection(nameSection: "Romantic Movies",
-                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_ActioMovies()),);}),
+            _NmeSection(nameSection: "Action Movies",
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
             new Container(
                 height: 220,
                 width: MediaQuery.of(context).size.width-8,
@@ -43,7 +51,7 @@ class _BirdState extends State<TabBar_one> {
                       return _itemsMovies(
                         imag: "${dataMoviesAction[postions].imagUrl}" ,
                         name: "${dataMoviesAction[postions].name.substring(0,10)}...",
-                        onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => MoveDetails_Action(
+                        onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Action(
                           name: dataMoviesAction[postions].name,
                           imagUrl:dataMoviesAction[postions].imagUrl ,
                           description: dataMoviesAction[postions].description,
@@ -81,6 +89,62 @@ class _BirdState extends State<TabBar_one> {
 
               ],
             ),
+
+            //========== Container ListView  horizontal
+            //=== قسم افلام الاكشن
+            SizedBox(height: 30),
+            _NmeSection(nameSection: "Drama Movies",
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Drama()),);}),
+            new Container(
+                height: 220,
+                width: MediaQuery.of(context).size.width-8,
+                child: ListView.builder(
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10,
+                    itemBuilder: (context ,postions){
+                      return _itemsMovies(
+                        imag: "${dataMoviesDrama[postions].imagUrl}" ,
+                        name: "${dataMoviesDrama[postions].name.substring(0,10)}...",
+                        onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Drama(
+                          name: dataMoviesDrama[postions].name,
+                          imagUrl:dataMoviesDrama[postions].imagUrl ,
+                          description: dataMoviesDrama[postions].description,
+                          videoUrl: dataMoviesDrama[postions].videoUrl,
+                        )),);},
+                      );
+                    })
+            ),
+            SizedBox(height: 20),
+
+
+            //========== Container ListView  horizontal
+            //=== قسم افلام انميشن
+            SizedBox(height: 30),
+            _NmeSection(nameSection: "Anmination Movies",
+                onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Anmination()),);}),
+            new Container(
+                height: 220,
+                width: MediaQuery.of(context).size.width-8,
+                child: ListView.builder(
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10,
+                    itemBuilder: (context ,postions){
+                      return _itemsMovies(
+                        imag: "${dataMoviesAnimation[postions].imagUrl}" ,
+                        name: "${dataMoviesAnimation[postions].name.substring(0,10)}...",
+                        onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Anmination(
+                          name: dataMoviesAnimation[postions].name,
+                          imagUrl:dataMoviesAnimation[postions].imagUrl ,
+                          description: dataMoviesAnimation[postions].description,
+                          videoUrl: dataMoviesAnimation[postions].videoUrl,
+                        )),);},
+                      );
+                    })
+            ),
+            SizedBox(height: 20),
+
 
 
 

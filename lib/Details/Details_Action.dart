@@ -1,21 +1,22 @@
       import 'package:flutter/material.dart';
-      import 'package:moviesapp/Tools/app_Colors.dart';
-      import '../Model/MyData_MoviesAction.dart';
-      import '../Pages/Page_ActioMovies.dart';
-      import '../Poster.dart';
-      import '../Plyer.dart';
+      import '../Tools/app_Colors.dart';
+      import '../componnets/Poster.dart';
+      import '../componnets/Plyer.dart';
+      import '../Model/MyData_MoviesِAction.dart';
+      import '../Details/Details_Action.dart';
+      import '../Pages/Page_Action.dart';
 
 
-      class MoveDetails_Action extends StatefulWidget {
+      class Details_Action extends StatefulWidget {
         final String name;
         final String description;
         final String imagUrl;
         final String videoUrl;
-    const MoveDetails_Action({Key key, this.name, this.description, this.imagUrl, this.videoUrl}) : super(key: key);
+    const Details_Action({Key key, this.name, this.description, this.imagUrl, this.videoUrl}) : super(key: key);
         _BirdState createState() => new _BirdState();
       }
 
-      class _BirdState extends State<MoveDetails_Action> {
+      class _BirdState extends State<Details_Action> {
 
         @override
         Widget build(BuildContext context) {
@@ -129,7 +130,7 @@
                       //========== Container ListView  horizontal
                       SizedBox(height: 30),
                       _NmeSection(nameSection: "Romantic Movies",
-                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_ActioMovies()),);}),
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
                       new Container(
                           height: 220,
                           width: MediaQuery.of(context).size.width-8,
@@ -139,13 +140,13 @@
                               itemCount: 10,
                               itemBuilder: (context ,postions){
                                 return _itemsMovies(
-                                  imag: "${dataMoviAction[postions].imagUrl}" ,
-                                  name: "${dataMoviAction[postions].name.substring(0,10)}...",
-                                  onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => MoveDetails_Action(
-                                    name: dataMoviAction[postions].name,
-                                    imagUrl:dataMoviAction[postions].imagUrl ,
-                                    description: dataMoviAction[postions].description,
-                                    videoUrl: dataMoviAction[postions].videoUrl,
+                                  imag: "${dataMoviesAction[postions].imagUrl}" ,
+                                  name: "${dataMoviesAction[postions].name.substring(0,10)}...",
+                                  onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Action(
+                                    name: dataMoviesAction[postions].name,
+                                    imagUrl:dataMoviesAction[postions].imagUrl ,
+                                    description: dataMoviesAction[postions].description,
+                                    videoUrl: dataMoviesAction[postions].videoUrl,
                                   )),);},
                                 );
                               })
