@@ -19,11 +19,11 @@ import '../Model/MyData_MoviesِAnimation.dart';
 
 
 
-class TabBar_one extends StatefulWidget {
+class TabBar_Home extends StatefulWidget {
   _BirdState createState() => new _BirdState();
 }
 
-class _BirdState extends State<TabBar_one> {
+class _BirdState extends State<TabBar_Home> {
   @override
   Widget build(BuildContext context) {
     return ListView(children: <Widget>[

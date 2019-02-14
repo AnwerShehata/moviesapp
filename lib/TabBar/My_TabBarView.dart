@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:moviesapp/TabBar/TabBar_one.dart' as one;
-import 'package:moviesapp/TabBar/TabBar_two.dart' as two;
-import 'package:moviesapp/TabBar/TabBar_four.dart' as four;
+import 'package:moviesapp/TabBar/TabBar_Home.dart' as one;
+import 'package:moviesapp/TabBar/TabBar_Series.dart' as two;
+import 'package:moviesapp/TabBar/TabBar_Sections.dart' as four;
 
 
 class My_TabBarView extends StatefulWidget {
@@ -59,9 +59,9 @@ class _BirdState extends State<My_TabBarView> with SingleTickerProviderStateMixi
         body: new TabBarView(
           controller: controller,
           children: <Widget>[
-            new one.TabBar_one(),
-            new two.TabBar_two(),
-            new four.TabBar_four(),
+            new one.TabBar_Home(),
+            new two.TabBar_Series(),
+            new four.TabBar_Sections(),
           ],
         ),
 

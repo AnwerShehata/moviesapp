@@ -64,6 +64,11 @@ flutter:
              - asset: fonts/Tajawal-Regular.ttf
 
 
+         - family: ArefRuqaa
+           fonts:
+             - asset: fonts/ArefRuqaa-Bold.ttf
+
+
 
 
   #

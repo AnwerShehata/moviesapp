@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moviesapp/TabBar/My_TabBarView.dart';
+import 'package:moviesapp/Details/DetailsSeries.dart';
 
 
 void main() => runApp(MyApp());
@@ -16,6 +17,7 @@ class _BirdState extends State<MyApp> {
 
 
     home: new My_TabBarView(),
+//    home: new DetailsSeries(),
 
     );
   }

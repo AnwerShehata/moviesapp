@@ -128,7 +128,7 @@
 
                       //========== Container ListView  horizontal
                       SizedBox(height: 30),
-                      _NmeSection(nameSection: "Romantic Movies",
+                      _NmeSection(nameSection: "More Anmination Movies",
                         onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Anmination()),);}),
                       new Container(
                           height: 220,
