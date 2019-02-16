@@ -23,144 +23,147 @@ class _BirdState extends State<Details_Action> {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(fontFamily: "Cairo"),
-      home:  new Scaffold(
-        backgroundColor: Colors.white,
+      home:  Directionality(textDirection: TextDirection.ltr,
+        child: new Scaffold(
+          backgroundColor: Colors.white,
 
 
 
-        body:  Stack(
-          alignment: Alignment.topCenter,
-          children: <Widget>[
+          body:  Stack(
+            alignment: Alignment.topCenter,
+            children: <Widget>[
 
-            //=== هنا الكونتير الثابت الذي يحمل الصور الشفافة
-            new Container(
-              height: 330,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [anColor2,anColor1],
-                    begin: FractionalOffset.topCenter,
-                    end: FractionalOffset.bottomCenter,
-                  ),
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      colorFilter: new ColorFilter.mode(anColor1.withAlpha(30), BlendMode.dstATop),
-                      image: NetworkImage(widget.imagUrl)
-                  )
+              //=== هنا الكونتير الثابت الذي يحمل الصور الشفافة
+              new Container(
+                height: 330,
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [anColor2,anColor1],
+                      begin: FractionalOffset.topCenter,
+                      end: FractionalOffset.bottomCenter,
+                    ),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        colorFilter: new ColorFilter.mode(anColor1.withAlpha(30), BlendMode.dstATop),
+                        image: NetworkImage(widget.imagUrl)
+                    )
+                ),
               ),
-            ),
 
 
-            //====== هنا السكرول الذي يحمل باقي البيانات
-            new SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
-              child: Column(
-                children: <Widget>[
-                  SizedBox(height: 260),
+              //====== هنا السكرول الذي يحمل باقي البيانات
+              new SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 260),
 
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: new Stack(
-                      children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: new Stack(
+                        children: <Widget>[
 
-                        //====== هنا الكونتينر الرئيسي
-                        new Container(
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20)
-                          ),
-                          width: MediaQuery.of(context).size.width,
-                          child: Column(
-                            children: <Widget>[
+                          //====== هنا الكونتينر الرئيسي
+                          new Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)
+                            ),
+                            width: MediaQuery.of(context).size.width,
+                            child: Column(
+                              children: <Widget>[
 
-                              // هنا الستاك الذي يحمل صور الفيلم وزر التشغيل والوصف وكل ما يتعلق بالفيلم
-                              new Stack(
-                                overflow: Overflow.visible,
-                                children: <Widget>[
+                                // هنا الستاك الذي يحمل صور الفيلم وزر التشغيل والوصف وكل ما يتعلق بالفيلم
+                                new Stack(
+                                  overflow: Overflow.visible,
+                                  children: <Widget>[
 
-                                  Material(
-                                    elevation: 5,
-                                    borderRadius: BorderRadius.circular(20),
-                                    child: new Container(
-                                      width: MediaQuery.of(context).size.width,
-                                      child: Column(children: <Widget>[
+                                    Material(
+                                      elevation: 5,
+                                      borderRadius: BorderRadius.circular(20),
+                                      child: new Container(
+                                        width: MediaQuery.of(context).size.width,
+                                        child: Column(children: <Widget>[
 
-                                        //====== هنا كونتينر زر التشغيل واسم الفيلم
-                                        SizedBox(height: 10),
-                                        _ButonPayandNameMoviesContainer(),
+                                          //====== هنا كونتينر زر التشغيل واسم الفيلم
+                                          SizedBox(height: 10),
+                                          _ButonPayandNameMoviesContainer(),
 
-                                        //======وصف الفيلم
-                                        _DescriptionBuil()
+                                          //======وصف الفيلم
+                                          _DescriptionBuil()
 
-                                      ],
+                                        ],
+                                        ),
                                       ),
                                     ),
-                                  ),
 
-                                  //=====  هنا صورة الفيلم
-                                  Positioned(
-                                      top: -50,
-                                      left: 20,
-                                      child: GestureDetector(
-                                        onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Poster(
-                                          name: widget.name,
-                                          imageurl: widget.imagUrl,
-                                        )),);},
-                                        child: Container(
-                                          height: 170, width: 120,
-                                          decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(10),
-                                              color: Colors.amber,
-                                              image: DecorationImage(fit:BoxFit.fill,image: NetworkImage(widget.imagUrl))
+                                    //=====  هنا صورة الفيلم
+                                    Positioned(
+                                        top: -50,
+                                        left: 20,
+                                        child: GestureDetector(
+                                          onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Poster(
+                                            name: widget.name,
+                                            imageurl: widget.imagUrl,
+                                          )),);},
+                                          child: Container(
+                                            height: 170, width: 120,
+                                            decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(10),
+                                                color: Colors.amber,
+                                                image: DecorationImage(fit:BoxFit.fill,image: NetworkImage(widget.imagUrl))
+                                            ),
                                           ),
-                                        ),
-                                      )),
+                                        )),
 
-                                ],
-                              ),
+                                  ],
+                                ),
 
-                            ],
-                          ),
-                        )
+                              ],
+                            ),
+                          )
 
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
 
 
-                  //========== Container ListView  horizontal
-                  SizedBox(height: 30),
-                  _NmeSection(nameSection: "More Action Movies",
-                      onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
-                  new Container(
-                      height: 220,
-                      width: MediaQuery.of(context).size.width-8,
-                      child: ListView.builder(
-                          physics: BouncingScrollPhysics(),
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 10,
-                          itemBuilder: (context ,postions){
-                            return _itemsMovies(
-                              imag: "${dataMoviesAction[postions].imagUrl}" ,
-                              name: "${dataMoviesAction[postions].name.substring(0,10)}...",
-                              onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Action(
-                                name: dataMoviesAction[postions].name,
-                                imagUrl:dataMoviesAction[postions].imagUrl ,
-                                description: dataMoviesAction[postions].description,
-                                videoUrl: dataMoviesAction[postions].videoUrl,
-                              )),);},
-                            );
-                          })
-                  ),
-                  SizedBox(height: 20),
+                    //========== Container ListView  horizontal
+                    SizedBox(height: 30),
+                    _NmeSection(nameSection: "المزيد من افلام الاكشن",
+                        onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
+                    new Container(
+                        height: 220,
+                        width: MediaQuery.of(context).size.width-8,
+                        child: ListView.builder(
+                          reverse: true,
+                            physics: BouncingScrollPhysics(),
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 10,
+                            itemBuilder: (context ,postions){
+                              return _itemsMovies(
+                                imag: "${dataMoviesAction[postions].imagUrl}" ,
+                                name: "${dataMoviesAction[postions].name.substring(0,10)}...",
+                                onTapp:(){Navigator.push(context, MaterialPageRoute(builder: (context) => Details_Action(
+                                  name: dataMoviesAction[postions].name,
+                                  imagUrl:dataMoviesAction[postions].imagUrl ,
+                                  description: dataMoviesAction[postions].description,
+                                  videoUrl: dataMoviesAction[postions].videoUrl,
+                                )),);},
+                              );
+                            })
+                    ),
+                    SizedBox(height: 20),
 
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
+
+
+
         ),
-
-
-
       ),
     );
   }
@@ -215,8 +218,8 @@ class _BirdState extends State<Details_Action> {
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          IconButton(icon: Icon(Icons.more_horiz), onPressed: onPressed),
           Text(nameSection , style: TextStyle(fontSize: 20),),
-          IconButton(icon: Icon(Icons.more_horiz), onPressed: onPressed)
         ],
       ),
     );

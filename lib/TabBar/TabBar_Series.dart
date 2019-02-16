@@ -55,6 +55,7 @@ class _BirdState extends State<TabBar_Series> {
             _NmeSection(nameSection: "مسلسلات مصرية "),
             new Container( height: 180,
                 child: ListView.builder(
+                  reverse: true,
                     scrollDirection: Axis.horizontal,
                     physics: BouncingScrollPhysics(),
                     itemCount: dataSeriesDrama.length,
@@ -80,6 +81,7 @@ class _BirdState extends State<TabBar_Series> {
             _NmeSection(nameSection: "مسلسلات خليجية"),
             new Container( height: 180,
               child: ListView.builder(
+                reverse: true,
                 scrollDirection: Axis.horizontal,
                 physics: BouncingScrollPhysics(),
                 itemCount: dataSeriesTarky.length,
@@ -183,8 +185,8 @@ class _BirdState extends State<TabBar_Series> {
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          IconButton(icon: Icon(Icons.arrow_back_ios,color:anColor3), onPressed: onPressed),
           Text(nameSection , style: TextStyle(fontSize: 20 ,color: anColor3),),
-          IconButton(icon: Icon(Icons.arrow_forward_ios,color:anColor3), onPressed: onPressed),
         ],
       ),
     );

@@ -36,7 +36,7 @@ class _BirdState extends State<My_TabBarView> with SingleTickerProviderStateMixi
           backgroundColor: Color(0xFF1d0148),
           centerTitle: true,
           elevation: 0,
-          title: new Text("Movies App" ,style: TextStyle(color: Colors.amber),),
+          title: new Text("توب سينما" ,style: TextStyle(color: Colors.amber),),
           // هنا اكواد تاب بار
           // هنا اكواد تاب بار
           bottom: new TabBar(
@@ -44,9 +44,9 @@ class _BirdState extends State<My_TabBarView> with SingleTickerProviderStateMixi
             controller: controller,
             indicatorColor: Colors.amber,
             tabs: <Widget>[
-              new Tab(text: "Home",),
-              new Tab(text: "Series",),
-              new Tab(text: "Sections",),
+              new Tab(text: "الرئيسية"),
+              new Tab(text: "مسلسلات",),
+              new Tab(text: "افلام",),
             ],
           ),
 

@@ -17,86 +17,87 @@ class _BirdState extends State<DetailsSeries> {
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(fontFamily: "Cairo"),
-      home:  new Scaffold(
+      home:  Directionality(textDirection: TextDirection.rtl,
+        child: new Scaffold(
 
-          body:Container(
-            child: Column(
-              children: <Widget>[
+            body:Container(
+              child: Column(
+                children: <Widget>[
 
-                new Container(
-                  height: 250,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                        image: NetworkImage(widget.imagUrl))
+                  new Container(
+                    height: 250,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                          image: NetworkImage(widget.imagUrl))
+                    ),
                   ),
-                ),
 
-                new ExpansionTile(
-                  title: Text(widget.name ,style: TextStyle(color: Colors.black),),
-                  backgroundColor: Colors.deepPurple.shade400,
-                  children: <Widget>[
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Padding(padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10), child: Text(widget.description,style: TextStyle(fontSize: 11 ,color: Colors.white),)),
-                          new Divider(),
-                          Padding(padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 0), child: Text("بطولة ",style: TextStyle(fontSize: 18 ,color: anColor4),)),
-                          new Container(
-                            height: 100,
-                            child: ListView(
-                              physics: BouncingScrollPhysics(),
-                              scrollDirection: Axis.horizontal,
-                              children: <Widget>[
-                                _itemsMovies(name:"Anwer",imag: "https://cdn.pixabay.com/photo/2017/12/12/05/01/portrait-3013924__480.jpg"),
-                                _itemsMovies(name: "Ali",imag: "https://cdn.pixabay.com/photo/2016/03/09/10/23/model-1246028__480.jpg"),
-                                _itemsMovies(name: "Ahmed",imag: "https://cdn.pixabay.com/photo/2016/05/23/23/32/human-1411499__480.jpg"),
-                                _itemsMovies(name: "Gmail",imag: "https://cdn.pixabay.com/photo/2017/01/14/10/57/woman-1979272__480.jpg"),
-                                _itemsMovies(name: "Nor",imag: "https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358__480.jpg"),
-                              ],
-                            )
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-
-                new Expanded(
-                  child: Container(
-                  child: ListView(
-                    physics: BouncingScrollPhysics(),
+                  new ExpansionTile(
+                    title: Text(widget.name ,style: TextStyle(color: Colors.black),),
+                    backgroundColor: Colors.deepPurple.shade400,
                     children: <Widget>[
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Padding(padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10), child: Text(widget.description,style: TextStyle(fontSize: 11 ,color: Colors.white),)),
+                            new Divider(),
+                            Padding(padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 0), child: Text("بطولة ",style: TextStyle(fontSize: 18 ,color: anColor4),)),
+                            new Container(
+                              height: 100,
+                              child: ListView(
+                                physics: BouncingScrollPhysics(),
+                                scrollDirection: Axis.horizontal,
+                                children: <Widget>[
+                                  _itemsMovies(name:"Anwer",imag: "https://images.pexels.com/photos/736716/pexels-photo-736716.jpeg"),
+                                  _itemsMovies(name: "Ali",imag: "https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg"),
+                                  _itemsMovies(name: "Ahmed",imag: "https://images.pexels.com/photos/1138903/pexels-photo-1138903.jpeg"),
+                                  _itemsMovies(name: "Gmail",imag: "https://images.pexels.com/photos/532220/pexels-photo-532220.jpeg"),
+                                  _itemsMovies(name: "Nor",imag: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg"),
+                                ],
+                              )
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
 
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
-                      buildPadding(),
+                  new Expanded(
+                    child: Container(
+                    child: ListView(
+                      physics: BouncingScrollPhysics(),
+                      children: <Widget>[
+                        buildPadding(name: " الحلقة الاولي "),
+                        buildPadding(name: "الحلقة الثانية "),
+                        buildPadding(name: "الحلقة الثالثة"),
+                        buildPadding(name: "الحلقة الرابعة "),
+                        buildPadding(name: "الحلقة الخامسة "),
+                        buildPadding(name: "الحلقة السادسة "),
+                        buildPadding(name: "الحلقة السابعة "),
+                        buildPadding(name: "الحلقة الثامنة "),
+                        buildPadding(name: "الحلقة التاسعة "),
+                        buildPadding(name: "الحلقة العاشرة "),
+                      ],),
+                  ))
 
-                    ],),
-                ))
+                ],
+              ),
+            )
 
-              ],
-            ),
-          )
-
+        ),
       ),
     );
   }
 
-  Padding buildPadding() {
+  Padding buildPadding({
+    String name ,
+}) {
     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                       child: Material(
                         elevation: 1,
-//                        shadowColor: Colors.pinkAccent,
                         borderRadius: BorderRadius.circular(10),
                         child: Container(
                           height: 70,
@@ -106,15 +107,15 @@ class _BirdState extends State<DetailsSeries> {
                               new Expanded(flex:6,child: Container(
                                 decoration: BoxDecoration(
                                     color: Colors.white,
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10) ,bottomLeft: Radius.circular(10))
+                                    borderRadius: BorderRadius.only(topRight: Radius.circular(10) ,bottomRight: Radius.circular(10))
                                 ),
-                                child: Center(child: Text("الحلقة الرابعة والعشرون "),)
+                                child: Center(child: Text(name),)
                               )),
 
                               new Expanded(flex: 2,child: Container(
                                 decoration: BoxDecoration(
                                   color:Colors.deepPurple.shade100,
-                                    borderRadius: BorderRadius.only(topRight: Radius.circular(10) ,bottomRight: Radius.circular(10))
+                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(10) ,bottomLeft: Radius.circular(10))
                                 ),
                                 child: Center(
                                   child: InkWell(onTap: (){print("Play");},

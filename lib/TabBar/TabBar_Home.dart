@@ -38,12 +38,13 @@ class _BirdState extends State<TabBar_Home> {
             //========== Container ListView  horizontal
             //=== قسم افلام الاكشن
             SizedBox(height: 30),
-            _NmeSection(nameSection: "Action Movies",
+            _NmeSection(nameSection: "افلام اكشن",
                 onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
             new Container(
                 height: 220,
                 width: MediaQuery.of(context).size.width-8,
                 child: ListView.builder(
+                  reverse: true,
                     physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemCount: 10,
@@ -72,6 +73,7 @@ class _BirdState extends State<TabBar_Home> {
                   decoration: BoxDecoration(
                       color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(5),
+                    image: DecorationImage(fit: BoxFit.cover,image: NetworkImage("https://image.tmdb.org/t/p/w1066_and_h600_bestv2/l2ji4YiNSPBV69WjGBgU0gCvRqy.jpg"))
                   ),
                 ),
 
@@ -93,12 +95,13 @@ class _BirdState extends State<TabBar_Home> {
             //========== Container ListView  horizontal
             //=== قسم افلام الاكشن
             SizedBox(height: 30),
-            _NmeSection(nameSection: "Drama Movies",
+            _NmeSection(nameSection: "افلام دراما",
                 onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Drama()),);}),
             new Container(
                 height: 220,
                 width: MediaQuery.of(context).size.width-8,
                 child: ListView.builder(
+                  reverse: true,
                     physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemCount: 10,
@@ -121,12 +124,13 @@ class _BirdState extends State<TabBar_Home> {
             //========== Container ListView  horizontal
             //=== قسم افلام انميشن
             SizedBox(height: 30),
-            _NmeSection(nameSection: "Anmination Movies",
+            _NmeSection(nameSection: "افلام انيميشن ",
                 onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Anmination()),);}),
             new Container(
                 height: 220,
                 width: MediaQuery.of(context).size.width-8,
                 child: ListView.builder(
+                  reverse: true,
                     physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemCount: 10,
@@ -209,8 +213,8 @@ class _BirdState extends State<TabBar_Home> {
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          IconButton(icon: Icon(Icons.more_horiz,color:anColor1), onPressed: onPressed),
           Text(nameSection , style: TextStyle(fontSize: 20 ,color: anColor1),),
-          IconButton(icon: Icon(Icons.more_horiz,color:anColor1), onPressed: onPressed)
         ],
       ),
     );

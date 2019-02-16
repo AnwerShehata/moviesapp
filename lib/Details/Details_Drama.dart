@@ -129,7 +129,7 @@
 
                       //========== Container ListView  horizontal
                       SizedBox(height: 30),
-                      _NmeSection(nameSection: "More Drama Movies",
+                      _NmeSection(nameSection: "المزيد من افلام الدراما",
                         onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Drama()),);
                       }),
@@ -137,6 +137,7 @@
                           height: 220,
                           width: MediaQuery.of(context).size.width-8,
                           child: ListView.builder(
+                            reverse: true,
                               physics: BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               itemCount: 10,
@@ -217,8 +218,8 @@
       child: new Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
+        IconButton(icon: Icon(Icons.more_horiz), onPressed: onPressed),
       Text(nameSection , style: TextStyle(fontSize: 20),),
-      IconButton(icon: Icon(Icons.more_horiz), onPressed: onPressed)
       ],
       ),
       );

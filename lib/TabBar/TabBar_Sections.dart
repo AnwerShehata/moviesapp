@@ -27,11 +27,11 @@ class _BirdState extends State<TabBar_Sections> {
     child: ListView(
       physics: BouncingScrollPhysics(),
       children: <Widget>[
-        _itmeSectionDetector(imagURL: PosterDrama,nameSection: "Movies Drama",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Drama()),);}),
-        _itmeSectionDetector(imagURL: PosterAnmination,nameSection: "Movies Anmination",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Anmination()),);}),
-        _itmeSectionDetector(imagURL: PosterAction,nameSection: "Movies Action",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
-        _itmeSectionDetector(imagURL: PosterWars,nameSection: "Movies Wars",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Wars()),);}),
-        _itmeSectionDetector(imagURL: PosterHorror,nameSection: "Movies Horror",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Horror()),);}),
+        _itmeSectionDetector(imagURL: PosterDrama,nameSection: "افلام دراما",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Drama()),);}),
+        _itmeSectionDetector(imagURL: PosterAnmination,nameSection: "افلام انيميشن",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Anmination()),);}),
+        _itmeSectionDetector(imagURL: PosterAction,nameSection: "افلام اكشن ",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Action()),);}),
+        _itmeSectionDetector(imagURL: PosterWars,nameSection: "أفلام الحروب",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Wars()),);}),
+        _itmeSectionDetector(imagURL: PosterHorror,nameSection: "أفلام رعب",onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Page_Horror()),);}),
       ],
     ),
   );
